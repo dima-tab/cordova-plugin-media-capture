@@ -27,6 +27,7 @@ function wrapMediaFiles (pluginResult) {
     for (i = 0; i < pluginResult.length; i++) {
         var mediaFile = new MediaFile();
         mediaFile.name = pluginResult[i].name;
+        alert(JSON.stringify(pluginResult[i]));
 
         // Backwards compatibility
         mediaFile.localURL = pluginResult[i].localURL || pluginResult[i].fullPath;
