@@ -32,6 +32,7 @@ var helpers = require('./helpers');
  */
 function _capture (type, successCallback, errorCallback, options) {
     var win = function (pluginResult) {
+        alert(JSON.stringify(pluginResult));
         successCallback(helpers.wrapMediaFiles(pluginResult));
     };
     exec(win, errorCallback, 'Capture', type, [options]);
